@@ -6,7 +6,7 @@ async function quantidadeUsuariosPorRede() {
     const dados = await res.json()
     const nomeDasRedes = Object.keys(dados)
     const quantidadeDeUsuarios = Object.values(dados)
-
+      
     const data = [
         {
             x: nomeDasRedes, 
@@ -54,6 +54,8 @@ async function quantidadeUsuariosPorRede() {
     grafico.className = 'grafico'
     document.getElementById('graficos-container').appendChild(grafico)
     Plotly.newPlot(grafico, data, laytout)
-}
+    
+      };
+      
 
 quantidadeUsuariosPorRede()
